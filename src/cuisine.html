@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+  
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body class="font-Raleway">
+    <header
+      class="flex w-full top-0 bg-[#f6f6f6] font-Raleway text-blue-900 items-center p-4"
+    >
+      <div class="w-16">
+        <img src="./images/logo2.png" class="object-cover" />
+      </div>
+      <div class="flex-1 flex justify-center">
+        <ul class="flex space-x-10 p-5 font-normal text-lg">
+          <a href="#">Home</a>
+          <a href="#">Cuisine</a>
+          <a href="#"
+            ><h class="text-4xl font-PT_Serif font-extralight -tracking-tighter"
+              >TAARAAZ</h
+            ></a
+          >
+          <a href="#">Our Work</a>
+          <a href="./contactus.html">Contact us </a>
+        </ul>
+      </div>
+      <div class="p-2 px-4 rounded-xl bg-black text-white">
+        <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif"
+          >Call us</a
+        >
+      </div>
+    </header>
+    <section class="w-11/12 m-auto">
+      <div class="flex justify-center">
+        <h1
+          class="type text-center textani text-7xl p-2 my-10 font-light font-Raleway"
+        >
+          Welcome to the World of Indian Cuisine
+        </h1>
+      </div>
+      <div class="flex shadow-2xl items-center p-5">
+        <!-- Main Left div -->
+        <div class="w-[30%] border-r-2 mr-2">
+          <div class="flex">
+            <div class="flex -space-x-4">
+              <img
+                class="w-14 h-14 object-cover border-white border-4 bg-gray-400 rounded-full"
+                src="./images/user1.jpg"
+              />
+              <img
+                class="w-14 h-14 object-cover border-white border-4 bg-gray-400 rounded-full"
+                src="./images/user2.jpg"
+              />
+              <img
+                class="w-14 h-14 object-cover border-white border-4 bg-gray-400 rounded-full"
+                src="./images/user3.jpg"
+              />
+            </div>
+
+            <div>
+              <h1 class="text-lg font-semibold">50+</h1>
+              <h1 class="text-xs">Positive Reviews</h1>
+            </div>
+          </div>
+          <hr class="py-1 w-[90%]" />
+          <div class="my-5 px-2">
+            <h1 class="font-normal">
+              At Taaraaz Catering, we believe that food is more than just a meal
+              it’s an experience, a story told through flavors, aromas, and
+              colors. Indian cuisine is a reflection of centuries of tradition,
+              regional diversity, and cultural heritage, all woven together by
+              spices, techniques, and love for food.
+            </h1>
+          </div>
+          <hr class="py-1 w-8/12" />
+          <div class=" inline-block hover:cursor-pointer" id="clickable-div">
+            <div class="flex items-center">
+              <div
+                class="bg-purple-100 rounded-full w-24 h-24 z-10 flex items-center justify-center"
+              >
+                <img
+                  src="./images//user3.jpg"
+                  alt="Person"
+                  class="rounded-full object-cover w-24 h-24"
+                />
+              </div>
+              <div class="relative bg-white -translate-x-12 w-28 h-28">
+                <!-- SVG -->
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <path
+                    id="circle"
+                    fill="none"
+                    stroke="none"
+                    d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
+                  />
+                  <text font-size="12" fill="#333">
+                    <textPath href="#circle" startOffset="50%" text-anchor="middle">
+                      OUR STORY
+                    </textPath>
+                  </text>
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="#000000" stroke-width="1" />
+                  <polygon points="45,35 65,50 45,65" fill="black" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Popup Modal -->
+          <div id="overlay"></div>
+          <div id="popup" >
+            <button class="close-btn absolute -translate-y-2 rounded-full w-8 h-8 right-0 bg-red-600 text-center text-white font-Raleway">X</button>
+            <div class="slideshow shadow-2xl">
+              <img src="./images/item1.jpg " alt="Slide 1" />
+            </div>
+            <div class="controls  w-full flex justify-center space-x-3 mt-2">
+              <button id="prev-btn2" class="bg-gray-200 rounded-full hover:bg-gray-300">
+                <img src="./images/next.svg" class="w-8 h-8 rotate-180">
+              </button>
+              <button id="next-btn2" class="bg-gray-200 rounded-full hover:bg-gray-300">
+                <img src="./images/next.svg" class="w-8 h-8 ">
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Main Center div  -->
+        <div class="w-[40%] flex flex-col bg-white items-center">
+          <div
+            class="relative flex flex-col items-center justify-center w-full mt-10"
+          >
+            <!-- Top Circle with Circular Text -->
+            <div
+              class="relative bg-[#FF6F3D] border-white -translate-x-[80%] border-4 w-32 h-32 flex items-center justify-center rounded-full z-10"
+            >
+              <!-- SVG for Circular Text and Arrow -->
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+                <path
+                  id="circlePath"
+                  fill="none"
+                  stroke="none"
+                  d="
+                        M 50, 50
+                        m -40, 0
+                        a 40,40 0 1,1 80,0
+                        a 40,40 0 1,1 -80,0"
+                />
+                <!-- Circular Text -->
+                <text font-size="10" fill="#fff" font-weight="500">
+                  <textPath
+                    href="#circlePath"
+                    startOffset="50%"
+                    text-anchor="end"
+                  >
+                    EXPLORE OUR MENU NOW
+                  </textPath>
+                </text>
+              </svg>
+              <!-- Play Icon in the Center -->
+              <div class="absolute flex items-center justify-center">
+                <svg class="w-8 h-8">
+                  <g data-name="18-Arrow Down">
+                    <path
+                      d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z"
+                    />
+                    <path
+                      d="M17 23.59V5h-2v18.59l-5.29-5.3-1.42 1.42 7 7a1 1 0 0 0 1.41 0l7-7-1.41-1.41z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Main Image Section -->
+            <div class="relative -mt-10 flex justify-center">
+              <!-- Image with custom rounded borders to mimic arch -->
+              <img
+                src="images/fd.jpg"
+                alt="Dish"
+                class="w-6/12 h-auto object-cover border-b-8 border-white"
+              />
+              <svg
+                class="absolute w-6/12 h-auto z-10 translate-x-[40%] -translate-y-[20%]"
+              >
+                <!-- Square Path -->
+                <path
+                  id="squareTextPath"
+                  d="M 20 20 L 180 20 L 180 150 L 20 150 "
+                  fill="transparent"
+                />
+
+                <!-- Text on Square Path -->
+                <text
+                  class="text-black font-semibold font-Cinzel tracking-widest"
+                  font-size="20"
+                >
+                  <textPath
+                    href="#squareTextPath"
+                    startOffset="60%"
+                    text-anchor="end"
+                  >
+                    FLAVORS FOR ROYALTY
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Main Right div -->
+        <div class="w-[30%] border-l-2 ml-2">
+          <h1 class="text-2xl text-center">Our Top Recipes</h1>
+          <div class="space-y-7">
+            <div
+              class="flex justify-center items-center hover:bg-gray-200 rounded-2xl bg-gray-50 p-2 m-2"
+            >
+              <img
+                src="./images/butter_chicken.jpg"
+                class="w-28 h-28 object-cover rounded-2xl"
+              />
+              <div class="px-2">
+                <h1 class="text-xl font-semibold">Butter Chicken</h1>
+                <img src="./images/star.png" class="w-28 h-5" />
+                <h1 class="px-1 text-xs">
+                  A creamy and flavorful Indian dish made with chicken tikka
+                  cooked in a rich tomato-based gravy.
+                </h1>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center hover:bg-gray-200 rounded-2xl bg-gray-50 p-2 m-2"
+            >
+              <img
+                src="./images/veg_briyani.jpg"
+                class="w-28 h-28 object-cover rounded-xl"
+              />
+              <div class="px-2">
+                <h1 class="text-xl font-semibold">Vegetable Biryani</h1>
+                <img src="./images/star.png" class="w-28 h-5" />
+                <h1 class="px-1 text-xs">
+                  A fragrant and aromatic rice dish layered with vegetables and
+                  spices, often served with raita.
+                </h1>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center hover:bg-gray-200 rounded-2xl bg-gray-50 p-2 m-2"
+            >
+              <img src="./images/itemmenu.png" class="w-28 h-28 object-cover" />
+              <div class="px-2">
+                <h1 class="text-xl font-semibold">Paneer Tikka Masala</h1>
+                <img src="./images/star.png" class="w-28 h-5" />
+                <h1 class="px-1 text-xs">
+                  A popular North Indian dish made with cubes of paneer (cottage
+                  cheese) marinated in spices and cooked in a creamy
+                  tomato-based gravy.
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-11/12 mr-auto shadow-2xl mt-28 h-full">
+      <div class="absolute">
+        <h1 class="font-Cinzel  text-[140px] font-extralight opacity-5">Taaraa<strong class="text-white ">z</strong></h1>
+        <h1 class="font-Cinzel text-end -translate-y-14 text-white opacity-20">Pvt.Ltd</h1>
+      </div>
+     
+
+      <div class="flex border-black justify-center items-center h-full">
+
+        <div class="shadow-2xl p-2 rounded-xl bg-green-50 basis-[20%]">
+          <h1 class="text-center text-blue-900  font-Raleway text-2xl line-clamp-3 ">Begin Your Celebration with Our Exquisite Menu!</h1>
+        </div>
+
+        <div class="bg-gray-700 rounded-l-full p-4 flex basis-[20%]">
+          <img src="./images/item3 (2).png  " class="rotatee w-52 h-52 object-cover" />
+        </div>
+
+        <div class="text-gray-200 bg-gray-700 basis-[70%] p-8">
+          <!-- Menu Headings -->
+          <div class="flex justify-center bg-gray-800 p-2 items-center space-x-4">
+            <h1
+              id="silver-heading"
+              class="menu-heading transition-all duration-300 transform scale-150 opacity-100"
+            >
+              Silver Menu
+            </h1>
+            <h1
+              id="gold-heading"
+              class="menu-heading transition-all duration-300 transform scale-90 opacity-75"
+            >
+              Gold Menu
+            </h1>
+            <h1
+              id="platinum-heading"
+              class="menu-heading transition-all duration-300 transform scale-90 opacity-50"
+            >
+              Platinum Menu
+            </h1>
+          </div>
+
+          <h2
+            id="menu-description"
+            class="font-Cinzel text-xl text-center opacity-0 transition-opacity duration-500 my-4"
+          >
+            Curated with passion, crafted with excellence. A menu that elevates
+            your dining experience.
+          </h2>
+
+          <!-- Menu Items Grid -->
+          <div
+            id="menu-content"
+            class="grid grid-cols-2 justify-center shadow-2xl p-10 gap-6 opacity-0 transition-opacity duration-500 overflow-hidden"
+          >
+            <div id="starter_div" class="hover:shadow-2xl hover:bg-gray-800 hover:rounded-xl hover:px-8 py-2 transition-all duration-500 ease-in-out">
+              <h3 class="font-bold text-lg mb-2 font-Cinzel">Starter</h3>
+              <ul id="starter-items" class="list-disc text-gray-300"></ul>
+            </div>
+
+            <div  class="hover:shadow-2xl hover:bg-gray-800 hover:rounded-xl hover:px-8 py-2 transition-all duration-500 ease-in-out">
+              <h3 class="font-bold text-lg mb-2 font-Cinzel">Salads</h3>
+              <ul id="salad-items" class="list-disc text-gray-300"></ul>
+            </div>
+
+            <div  class="hover:shadow-2xl hover:bg-gray-800 hover:rounded-xl hover:px-8 py-2 transition-all duration-500 ease-in-out">
+              <h3 class="font-bold text-lg mb-2 font-Cinzel">Main Course</h3>
+              <ul id="main-course-items" class="list-disc text-gray-300"></ul>
+            </div>
+
+            <div  class="hover:shadow-2xl hover:bg-gray-800 hover:rounded-xl hover:px-8 py-2 transition-all duration-500 ease-in-out">
+              <h3 class="font-bold text-lg mb-2 font-Cinzel">Desserts</h3>
+              <ul id="dessert-items" class="list-disc text-gray-300"></ul>
+            </div>
+
+            <div  class="hover:shadow-2xl hover:bg-gray-800 hover:rounded-xl hover:px-8 py-2 transition-all duration-500 ease-in-out">
+              <h3 class="font-bold text-lg mb-2 font-Cinzel">Beverages</h3>
+              <ul id="beverage-items" class="list-disc text-gray-300"></ul>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="flex space-x-2 justify-center mt-6">
+            <button
+              id="prev-btn"
+              class="bg-gray-100 p-2 rounded-full hover:bg-gray-300 transition-transform transform hover:scale-105"
+            >
+              <img src="./images/next.svg" class="w-5 h-5 rotate-180" />
+            </button>
+            <button
+              id="next-btn"
+              class="bg-gray-100 p-2 rounded-full hover:bg-gray-300 transition-transform transform hover:scale-105"
+            >
+              <img src="./images/next.svg" class="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-blue-950 text-white py-12  font-Raleway mt-10">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Brand and Description -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Taaraaz.com</h2>
+          <p class="text-gray-400">Providing world-class catering services for all occasions. From corporate events to private parties, we make every event memorable with delicious food.</p>
+        </div>
+    
+        <!-- Navigation Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li class="mb-2"><a href="./aboutus.html" class="text-gray-400 hover:text-gray-200">About Us</a></li>
+            <li class="mb-2"><a href="#menu" class="text-gray-400 hover:text-gray-200">Our Menu</a></li>
+            <li class="mb-2"><a href="#services" class="text-gray-400 hover:text-gray-200">Services</a></li>
+            <li class="mb-2"><a href="./contactus.html" class="text-gray-400 hover:text-gray-200">Contact Us</a></li>
+            <li class="mb-2"><a href="#gallery" class="text-gray-400 hover:text-gray-200">Gallery</a></li>
+          </ul>
+        </div>
+    
+        <!-- Contact and Social Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4 font-PT_Serif">Get in Touch</h3>
+          <p class="mb-2 text-gray-400">Email: info@taaraaz.com</p>
+          <p class="mb-4 text-gray-400">Phone: +91 9559137135</p>
+          
+          <h4 class="text-lg font-semibold mb-2">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-gray-200 w-8 h-8"><img src="./images/facebook.png"></a>
+            <a href="#" class="text-gray-400 hover:text-gray-200 w-8 h-8"><img src="./images/instagram.png"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gray-200 w-8 h-8"><img src="./images/twitter-alt.png"></i></a>
+
+          </div>
+        </div>
+      </div>
+    
+      <!-- Bottom Section -->
+      <div class="mt-12 text-center border-t border-gray-700 pt-8">
+        <p class="text-gray-500">&copy; 2024 Taaraaz.com. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const menus = [
+      {
+        heading: "Silver Menu",
+        description: "Perfect for Simple Gatherings and Celebrations",
+        starterItems: [
+          "Paneer Tikka",
+          "Vegetable Samosa",
+          "Chicken Malai Tikka",
+          "Aloo Tikki",
+        ],
+        saladItems: [
+          "Kachumber Salad",
+          "Green Salad",
+          "Masala Chana Salad",
+          "Cucumber Raita",
+        ],
+        mainCourseItems: [
+          "Dal Makhani",
+          "Paneer Butter Masala",
+          "Chicken Curry",
+          "Jeera Rice",
+          "Tandoori Roti",
+        ],
+        dessertItems: ["Gulab Jamun", "Rasgulla", "Ice Cream", "Kheer"],
+        beverageItems: ["Masala Chai", "Jal Jeera", "Buttermilk", "Lassi"],
+      },
+      {
+        heading: "Gold Menu",
+        description: "An Exquisite Feast for Memorable Occasions.",
+        starterItems: [
+          "Tandoori Chicken",
+          "Hara Bhara Kabab",
+          "Mutton Seekh Kebab",
+          "Paneer Pakora",
+        ],
+        saladItems: [
+          "Beetroot Salad",
+          "Sprout Salad",
+          "Pineapple Raita",
+          "Boondi Raita",
+        ],
+        mainCourseItems: [
+          "Butter Chicken",
+          "Shahi Paneer",
+          "Rogan Josh",
+          "Veg Biryani",
+          "Garlic Naan",
+        ],
+        dessertItems: ["Rasmalai", "Phirni", "Gajar Ka Halwa", "Kulfi"],
+        beverageItems: [
+          "Fresh Lime Soda",
+          "Aam Panna",
+          "Thandai",
+          "Masala Chai",
+        ],
+      },
+      {
+        heading: "Platinum Menu",
+        description: "The Ultimate Royal Experience for Grand Celebrations.",
+        starterItems: [
+          "Fish Amritsari",
+          "Dahi Ke Kebab",
+          "Mutton Galouti Kebab",
+          "Paneer Shashlik",
+        ],
+        saladItems: [
+          "Russian Salad",
+          "Fruit Chaat",
+          "Mint Raita",
+          "Mixed Sprouts Salad",
+        ],
+        mainCourseItems: [
+          "Hyderabadi Biryani",
+          "Laal Maas",
+          "Malai Kofta",
+          "Mutton Dum Biryani",
+          "Roomali Roti",
+        ],
+        dessertItems: [
+          "Jalebi with Rabri",
+          "Moong Dal Halwa",
+          "Malpua",
+          "Paan Ice Cream",
+        ],
+        beverageItems: [
+          "Rose Sharbat",
+          "Cold Coffee",
+          "Nimbu Pani",
+          "Kesar Milk",
+        ],
+      },
+    ];
+    const popup = document.getElementById("popup");
+    const overlay = document.getElementById("overlay");
+    const clickableDiv = document.getElementById("clickable-div");
+    const closeButton = document.querySelector(".close-btn");
+    const nextBtn = document.getElementById("next-btn2");
+    const prevBtn = document.getElementById("prev-btn2");
+    const slideshow = document.querySelector(".slideshow img");
+
+    let currentMenuIndex = 0;
+
+    function updateMenuContent() {
+      const menu = menus[currentMenuIndex];
+
+      // Fade out the current content
+      document.getElementById("menu-content").classList.add("fade-out");
+      document.getElementById("menu-description").classList.add("fade-out");
+      const starterDiv=document.getElementById("starter_div").classList.add("fade-in")
+
+      setTimeout(() => {
+        // Update menu description
+        document.getElementById("menu-description").textContent =
+          menu.description;
+
+        // Update menu items
+        updateList("starter-items", menu.starterItems);
+        updateList("salad-items", menu.saladItems);
+        updateList("main-course-items", menu.mainCourseItems);
+        updateList("dessert-items", menu.dessertItems);
+        updateList("beverage-items", menu.beverageItems);
+
+        // Fade-in the updated content
+        document.getElementById("menu-content").classList.remove("fade-out");
+        document.getElementById("menu-content").classList.add("fade-in");
+        document
+          .getElementById("menu-description")
+          .classList.remove("fade-out");
+        document.getElementById("menu-description").classList.add("fade-in");
+      }, 500);
+    }
+
+    function updateHeadings() {
+      const headings = ["silver-heading", "gold-heading", "platinum-heading"];
+      headings.forEach((id, index) => {
+        const heading = document.getElementById(id);
+        if (index === currentMenuIndex) {
+          heading.classList.add("active-heading");
+          heading.classList.remove("inactive-heading");
+        } else {
+          heading.classList.remove("active-heading");
+          heading.classList.add("inactive-heading");
+        }
+      });
+    }
+
+    function updateList(listId, items) {
+      const ul = document.getElementById(listId);
+      ul.innerHTML = ""; // Clear the current items
+      items.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+
+    document.getElementById("prev-btn").addEventListener("click", () => {
+      currentMenuIndex = (currentMenuIndex - 1 + menus.length) % menus.length;
+      updateMenuContent();
+      updateHeadings();
+    });
+
+    document.getElementById("next-btn").addEventListener("click", () => {
+      currentMenuIndex = (currentMenuIndex + 1) % menus.length;
+      updateMenuContent();
+      updateHeadings();
+    });
+
+    // Initial render
+    updateMenuContent();
+    updateHeadings();
+
+
+    // Slideshow images array
+    const images = [
+      "./images/item1.jpg",
+      "./images/item2.jpg",
+      "./images/item3.jpg"
+    ];
+    let currentImageIndex = 0;
+    let autoPlay;
+
+    // Function to open the popup
+    function openPopup() {
+      popup.style.display = "block";
+      overlay.style.display = "block";
+      document.body.style.overflow = "hidden"; // Prevent background scrolling
+      startAutoplay();
+    }
+
+    // Function to close the popup
+    function closePopup() {
+      popup.style.display = "none";
+      overlay.style.display = "none";
+      document.body.style.overflow = "auto"; // Re-enable background scrolling
+      stopAutoplay();
+    }
+
+    // Function to show the next image
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      slideshow.src = images[currentImageIndex];
+    }
+
+    // Function to show the previous image
+    function showPrevImage() {
+      currentImageIndex =
+        (currentImageIndex - 1 + images.length) % images.length;
+      slideshow.src = images[currentImageIndex];
+    }
+
+    // Autoplay functionality
+    function startAutoplay() {
+      autoPlay = setInterval(showNextImage, 3000); // Change image every 3 seconds
+    }
+
+    function stopAutoplay() {
+      clearInterval(autoPlay);
+    }
+
+    // Event listeners
+    clickableDiv.addEventListener("click", openPopup);
+    closeButton.addEventListener("click", closePopup);
+    nextBtn.addEventListener("click", showNextImage);
+    prevBtn.addEventListener("click", showPrevImage);
+
+    // Clicking outside the popup closes it
+    overlay.addEventListener("click", closePopup);
+  </script>
+</html>
