@@ -201,3 +201,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // Observe the section containing the text
   observer.observe(document.querySelector('section'));
 });
+
+const popup = document.getElementById("popup");
+const overlay = document.getElementById("overlay");
+const bookNow=document.getElementById("book_now");
+const closeButton = document.querySelector(".close-btn");
+
+
+function openPopup() {
+  popup.style.display = "block";
+  overlay.style.display = "block";
+  document.body.style.overflow = "hidden"; // Prevent background scrolling
+
+}
+
+// Function to close the popup
+function closePopup() {
+  popup.style.display = "none";
+  overlay.style.display = "none";
+  document.body.style.overflow = "auto"; // Re-enable background scrolling
+ 
+}
+
+bookNow.addEventListener("click",openPopup);
+closeButton.addEventListener("click", closePopup);
+
+
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});

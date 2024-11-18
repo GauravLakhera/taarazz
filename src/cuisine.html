@@ -28,39 +28,73 @@
   </head>
   <body class="font-Raleway">
     <header
-      class="flex w-full top-0 bg-[#f6f6f6] font-Raleway text-blue-900 items-center p-4"
+  class="flex justify-between items-center absolute w-full top-0 bg-gray-100 md:bg-transparent backdrop-blur font-Raleway text-blue-900 md:p-4"
+>
+  <!-- Logo -->
+  <div class="w-16 p-2 mx-2">
+    <img src="./images/logo2.png" class="object-cover" alt="Logo" />
+  </div>
+
+  <!-- Hamburger Icon (Visible on mobile) -->
+  <div class="md:hidden mx-2">
+    <button
+      id="menu-btn"
+      class="text-blue-900 focus:outline-none p-2"
     >
-      <div class="w-16">
-        <img src="./images/logo2.png" class="object-cover" />
-      </div>
-      <div class="flex-1 flex justify-center">
-        <ul class="flex space-x-10 p-5 font-normal text-lg">
-          <a href="#">Home</a>
-          <a href="#">Cuisine</a>
-          <a href="#"
-            ><h class="text-4xl font-PT_Serif font-extralight -tracking-tighter"
-              >TAARAAZ</h
-            ></a
-          >
-          <a href="#">Our Work</a>
-          <a href="./contactus.html">Contact us </a>
-        </ul>
-      </div>
-      <div class="p-2 px-4 rounded-xl bg-black text-white">
-        <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif"
-          >Call us</a
-        >
-      </div>
-    </header>
-    <section class="w-11/12 m-auto">
+      <svg
+        class="w-8 h-8"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navigation (hidden on mobile, visible on md screens) -->
+  <div class="hidden md:flex-1 md:flex justify-center">
+    <ul class="flex space-x-10 p-5 font-normal text-lg">
+      <li><a href="./index.html" class="hover:underline">Home</a></li>
+      <li><a href="./cuisine.html" class="hover:underline">Cuisine</a></li>
+      <li>
+        <h1 class="text-4xl font-PT_Serif font-extralight -tracking-tighter">
+          TAARAAZ
+        </h1>
+      </li>
+      <li><a href="./ourWork.html" class="hover:underline">Our Work</a></li>
+      <li><a href="./contactus.html" class="hover:underline">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Call Us Button -->
+  <div class="hidden md:block p-2 px-4 rounded-xl bg-black text-white">
+    <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif">Call Us</a>
+  </div>
+
+  <!-- Mobile Menu (Initially hidden) -->
+  <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-gray-50 hidden z-50 md:hidden">
+    <ul class="flex flex-col space-y-4 p-5 text-lg text-center">
+      <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
+      <li><a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a></li>
+      <li><a href="./ourWork.html" class="hover:text-blue-500">Our Work</a></li>
+      <li><a href="./contactus.html" class="hover:text-blue-500">Contact Us</a></li>
+    </ul>
+    <div class="p-2 px-4 rounded-xl bg-black text-white">
+      <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif">Call Us</a>
+    </div>
+  </div>
+</header>
+    <section class="w-11/12 m-auto mt-5">
       <div class="flex justify-center">
         <h1
-          class="type text-center textani text-7xl p-2 my-10 font-light font-Raleway"
+          class="type text-center textani text-xl md:text-7xl p-2 my-10 font-light font-Raleway"
         >
           Welcome to the World of Indian Cuisine
         </h1>
       </div>
-      <div class="flex shadow-2xl items-center p-5">
+      <div class="flex flex-col md:flex-row shadow-2xl items-center p-5">
         <!-- Main Left div -->
         <div class="w-[30%] border-r-2 mr-2">
           <div class="flex">

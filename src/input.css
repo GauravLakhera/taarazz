@@ -130,60 +130,125 @@ body::-webkit-scrollbar {
 }
 
 
+
+
 .slider-wrapper {
-    height: 40rem;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 300px;
-    right: 0;
-    
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+.slider>img {
+  width: 30%;
+  object-fit: contain;
+
+}
+
+
+.slider {
+  animation: scroll 60s linear infinite;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ 
+}
+/* .shadow-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(231, 243, 255,1), transparent);
+  z-index: 10;
+
+}
+
+.shadow-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, rgba(231, 243, 255, 1), transparent);
+  z-index: 10;
+} */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  .slider>img {
-    width: 100%;
-    object-fit: contain;
-
-
+  100% {
+    transform: translateX(-100%);
   }
+}
 
-  .slider {
-    animation: scroll 10s linear infinite;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-  }
 
-  @keyframes scroll {
-    0% {
-      transform: translateY(0);
+  @media (min-width: 768px) { 
+    .slider-wrapper {
+
+      height: 40rem;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 300px;
+      right: 0;
+      
     }
-    100% {
-      transform: translateY(-100%);
+    .slider>img {
+      width: 100%;
+      object-fit: contain;
+  
+  
     }
-  }
+  
+    .slider {
+      animation: scroll 60s linear infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     
+    }
+    .shadow-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to bottom, rgba(231, 243, 255,1), transparent);
+      z-index: 10;
+  
+    }
+  
+    .shadow-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to top, rgba(231, 243, 255, 1), transparent);
+      z-index: 10;
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+  
+   }
+
+
+
+
+
+
 
   /* Top and bottom shadow gradient */
-  .shadow-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background: linear-gradient(to bottom, rgba(231, 243, 255,1), transparent);
-    z-index: 10;
-
-  }
-
-  .shadow-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background: linear-gradient(to top, rgba(231, 243, 255, 1), transparent);
-    z-index: 10;
-  }
+  
 
 
   .fade {
