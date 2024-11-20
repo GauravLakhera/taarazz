@@ -77,65 +77,89 @@
   </div>
 
   <!-- Mobile Menu (Initially hidden) -->
-  <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-gray-50 hidden z-50 md:hidden">
-    <ul class="flex flex-col space-y-4 p-5 text-lg text-center">
-      <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
-      <li><a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a></li>
-      <li><a href="./ourWork.html" class="hover:text-blue-500">Our Work</a></li>
-      <li><a href="./contactus.html" class="hover:text-blue-500">Contact Us</a></li>
-    </ul>
-    <div class="p-2 px-4 rounded-xl bg-black text-white">
-      <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif">Call Us</a>
-    </div>
+  <div
+  id="mobile-menu"
+  class="absolute top-16 left-0 w-full  bg-gray-50 hidden z-[9999] md:hidden"
+>
+  <ul class="flex flex-col space-y-4 p-5 text-lg text-center z-50">
+    <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
+    <li><a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a></li>
+    <li><a href="./ourWork.html" class="hover:text-blue-500">Our Work</a></li>
+    <li><a href="./contactus.html" class="hover:text-blue-500">Contact Us</a></li>
+  </ul>
+  <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
+    <a href="tel:+919559137135" class="cursor-pointer font-Raleway text-center">Call Us</a>
   </div>
+</div>
 </header>
 
 
     <!-- Hero Section -->
     <section
-      class="relative bg-[url('./images/bg.svg')] z-10 bg-no-repeat bg-cover bg-center flex font-Raleway text-black bg-slate-50"
+      class="relative bg-[url('./images/bg.svg')] bg-no-repeat bg-cover bg-center flex font-Raleway text-black bg-slate-50"
     >
     <div id="overlay" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden"></div>
+
     <div
       id="popup"
-      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-lg shadow-2xl w-full max-w-lg hidden font-Raleway"
+      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-2xl w-full max-w-8xl hidden font-Raleway"
     >
+      <!-- Close Button -->
       <button
         class="close-btn absolute -top-4 -right-4 w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white hover:bg-red-700 transition duration-300"
       >
         X
       </button>
-      <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">
-        Get in touch with us 
-      </h2>
-      <form class="space-y-4">
-        <input
-          type="text"
-          placeholder="Name"
-          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
-        />
-        <input
-          type="text"
-          placeholder="Contact Number"
-          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
-        />
-        <input
-          type="text"
-          placeholder="Location"
-          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
-        />
-        <textarea
-          placeholder="Message"
-          class="w-full p-3 border border-gray-300 rounded-lg h-28 focus:outline-none focus:ring-1 focus:ring-blue-500"
-        ></textarea>
-        <button
-          type="submit"
-          class="w-full py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition duration-300"
-        >
-          Submit
-        </button>
-      </form>
+    
+      <!-- Container for form and image -->
+      <div class="grid grid-cols-1 md:grid-cols-2">
+    
+        <!-- Left side: Image -->
+        <div class="hidden md:block">
+          <img
+          src="./images/blue.jpg"
+            alt="Contact Us"
+            class="w-full h-full object-cover rounded-l-lg"
+          />
+        </div>
+    
+        <!-- Right side: Form -->
+        <div class="p-8">
+          <h2 class="text-3xl font-semibold text-gray-800 text-center mb-6">
+            Get in touch with us
+          </h2>
+    
+          <form class="space-y-4">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="text"
+              placeholder="Contact Number"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="text"
+              placeholder="Location"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <textarea
+              placeholder="Message"
+              class="w-full p-3 border border-gray-300 rounded-lg h-28 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
+    
     
       <div
         class="shadow-2xl md:-translate-y-28 z-10 bg-white w-72 h-72 md:h-[40rem] md:w-[40rem] transform rotate-45 mx-auto font-Raleway text-black m-auto justify-center items-center"

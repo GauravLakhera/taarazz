@@ -20,108 +20,155 @@
 
   <body>
     <header
-      class="flex w-full top-0 bg-[#f6f6f6] font-Raleway text-blue-900 border-b items-center p-4"
+      class="flex justify-between items-center w-full top-0 bg-gray-100 md:bg-transparent backdrop-blur font-Raleway text-blue-900 md:p-4"
     >
-      <div class="w-16">
-        <img src="./images/logo2.png" class="object-cover" />
+      <!-- Logo -->
+      <div class="w-16 p-2 mx-2">
+        <img src="./images/logo2.png" class="object-cover" alt="Logo" />
       </div>
-      <div class="flex-1 flex justify-center">
-        <ul class="flex space-x-10 p-5 font-normal text-lg">
-          <a href="./index.html">Home</a>
-          <a href="#">Cuisine</a>
-          <a href="#"
-            ><h class="text-4xl font-PT_Serif font-extralight -tracking-tighter"
-              >TAARAAZ</h
-            ></a
+
+      <!-- Hamburger Icon (Visible on mobile) -->
+      <div class="md:hidden mx-2">
+        <button id="menu-btn" class="text-blue-900 focus:outline-none p-2">
+          <svg
+            class="w-8 h-8"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-          <a href="#">Our Work</a>
-          <a href="./contactus.html">Contact us </a>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation (hidden on mobile, visible on md screens) -->
+      <div class="hidden md:flex-1 md:flex justify-center">
+        <ul class="flex space-x-10 p-5 font-normal text-lg">
+          <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="./cuisine.html" class="hover:underline">Cuisine</a></li>
+          <li>
+            <h1
+              class="text-4xl font-PT_Serif font-extralight -tracking-tighter"
+            >
+              TAARAAZ
+            </h1>
+          </li>
+          <li><a href="./ourWork.html" class="hover:underline">Our Work</a></li>
+          <li>
+            <a href="./contactus.html" class="hover:underline">Contact Us</a>
+          </li>
         </ul>
       </div>
-      <div class="border p-2 rounded-xl bg-black text-white">
-        <a href="tel:+919559137135" class="cursor-pointer">Call us</a>
+
+      <!-- Call Us Button -->
+      <div class="hidden md:block p-2 px-4 rounded-xl bg-black text-white">
+        <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif"
+          >Call Us</a
+        >
       </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div
+      id="mobile-menu"
+      class="absolute top-16 left-0 w-full py-5 bg-gray-50 hidden z-[9999] md:hidden"
+    >
+      <ul class="flex flex-col space-y-4 p-5 text-lg text-center z-50">
+        <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a></li>
+        <li><a href="./ourWork.html" class="hover:text-blue-500">Our Work</a></li>
+        <li><a href="./contactus.html" class="hover:text-blue-500">Contact Us</a></li>
+      </ul>
+      <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
+        <a href="tel:+919559137135" class="cursor-pointer font-Raleway text-center">Call Us</a>
+      </div>
+    </div>
     </header>
 
-    <img src="./images/arrow.gif" class="absolute w-[20rem] left-10" />
+    <img src="./images/arrow.gif" class="absolute w-[10rem] md:mt-0 mt-5  md:w-[20rem] z-[-9] left-10" />
 
     <section
       class="bg-[url('./images/bg.svg')] bg-opacity-70 w-full bg-no-repeat bg-cover bg-center"
     >
       <div
-        class="flex flex-col justify-center font-Raleway items-center w-9/12 m-auto"
+        class="flex flex-col justify-center font-Raleway  z-[-10] items-center w-11/12 md:w-9/12 m-auto"
       >
-        <div class="mt-10 text-center">
+        <div class="mt-10 md:text-center text-right  z-[-10]">
           <h1 class="text-3xl font-semibold backdrop-blur-sm">
             Let's Talk about
           </h1>
-          <h1 class="text-3xl font-semibold backdrop-blur-sm">your Event</h1>
-          <p>Drop us a line through the form below and we will get back to</p>
+          <h1 class="text-3xl font-semibold backdrop-blur-sm ">your Event</h1>
+          <p class="mt-4 md:mt-0">Drop us a line through the form below and we will get back to</p>
         </div>
         <div
-          class="flex w-full shadow-2xl rounded-xl border mt-10 p-10 py-20 backdrop-blur-[5px]"
+          class="flex flex-col  md:flex-row w-full shadow-2xl rounded-xl border mt-10 p-10 py-20 backdrop-blur-[5px]"
         >
           <div class=" w-22%">
             <div class="bg-blue-700 p-5 text-white rounded-lg">
-              <div class="space-y-5 flex flex-col">
+              <div class="md:space-y-5 space-y-3 flex flex-col">
                 <div class="flex items-center space-x-4">
                   <img src="./images/call2.png" class="w-7 h-7" />
-                  <h1 class="text-lg">Call Us At</h1>
+                  <h1 class="text-lg font-semibold">Call Us At</h1>
                 </div>
 
-                <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif"
+                <a href="tel:+919559137135" class="cursor-pointer ml-2"
                   >+919559137135</a
                 >
 
                 <button class="p-2 w-full rounded-lg bg-blue-500">
                   <a
                     href="tel:+919559137135"
-                    class="cursor-pointer font-PT_Serif"
+                    class="cursor-pointer"
                     >Contact Us</a
                   >
                 </button>
               </div>
             </div>
             <div class="bg-gray-200 p-5 mt-8 text-black rounded-lg">
-              <div class="space-y-5 flex flex-col">
+              <div class="md:space-y-5 space-y-3 flex flex-col">
                 <div class="flex items-center space-x-4">
                   <img src="./images/meeting.png" class="w-7 h-7" />
-                  <h1 class="text-lg">Chat With Our Team</h1>
+                  <h1 class="text-lg font-semibold">Chat With Our Team</h1>
                 </div>
 
-                <a href="mailto:taaraaz.catering@gmail.com"
+                <a href="mailto:taaraaz.catering@gmail.com" class="ml-2"
                   >taaraaz.catering@gmail.com</a
                 >
 
                 <button class="p-2 w-full rounded-lg bg-gray-100">
-                  <a href="mailto:taaraaz.catering@gmail.com">Contact Us</a>
+                  <a href="mailto:taaraaz.catering@gmail.com">Chat With Us</a>
                 </button>
               </div>
             </div>
           </div>
           <!-- Form section -->
-          <div class="flex-1 px-2">
+          <div class="flex-1 md:px-2 md:mt-0 mt-10">
             <form
               class="p-5 border border-gray-300 rounded-2xl shadow-xl space-y-10 h-full"
             >
               <div class="flex space-x-1 items-center">
-                <img src="./images/name.svg" class="w-7 h-7" />
+                <img src="./images/name.svg" class="w-5 h-5 md:w-7 md:h-7" />
                 <input
                   class="w-full transition-all duration-300 p-2 px-4 bg-white border border-gray-300 rounded-e-2xl text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-500"
                   placeholder="Name"
                 />
               </div>
 
-              <div class="flex space-x-1">
+              <div class="flex flex-col md:flex-row md:space-x-1 space-y-10 md:space-y-0">
                 <div class="flex space-x-1 items-center">
-                  <img src="./images//email.svg" class="w-7 h-7" />
+                  <img src="./images//email.svg" class="w-5 h-5 md:w-7 md:h-7" />
                   <input
                     class="w-full transition-all duration-300 p-2 px-4 bg-white border border-gray-300 rounded-e-2xl  text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-500"
                     placeholder="Email"
                   />
                 </div>
                 <div class="flex space-x-1 items-center">
-                  <img src="./images/phone-flip.svg" class="w-7 h-7" />
+                  <img src="./images/phone-flip.svg" class="w-5 h-5 md:w-7 md:h-7" />
                   <input
                     class="w-full transition-all duration-300 p-2 px-4 bg-white border border-gray-300 rounded-e-2xl  text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-500"
                     placeholder="Phone Number"
@@ -183,4 +230,12 @@
     </footer>
     
   </body>
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 </html>
