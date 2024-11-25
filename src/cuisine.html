@@ -76,7 +76,11 @@
               TAARAAZ
             </h1>
           </li>
-          <li><a href="./ourWork.html" class="hover:underline">Our Work</a></li>
+          <li>
+            <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
+              >About Us</a
+            >
+          </li>
           <li>
             <a href="./contactus.html" class="hover:underline">Contact Us</a>
           </li>
@@ -92,19 +96,33 @@
 
       <!-- Mobile Menu (Initially hidden) -->
       <div
-      id="mobile-menu"
-      class="absolute top-16 left-0 w-full py-5 bg-gray-50 hidden z-[9999] md:hidden"
-    >
-      <ul class="flex flex-col space-y-4 p-5 text-lg text-center z-50">
-        <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
-        <li><a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a></li>
-        <li><a href="./ourWork.html" class="hover:text-blue-500">Our Work</a></li>
-        <li><a href="./contactus.html" class="hover:text-blue-500">Contact Us</a></li>
-      </ul>
-      <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
-        <a href="tel:+919559137135" class="cursor-pointer font-Raleway text-center">Call Us</a>
+        id="mobile-menu"
+        class="absolute top-16 left-0 w-full py-5 bg-gray-50 hidden z-[9999] md:hidden"
+      >
+        <ul class="flex flex-col space-y-4 p-5 text-lg text-center z-50">
+          <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
+          <li>
+            <a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a>
+          </li>
+          <li>
+            <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="./contactus.html" class="hover:text-blue-500"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
+          <a
+            href="tel:+919559137135"
+            class="cursor-pointer font-Raleway text-center"
+            >Call Us</a
+          >
+        </div>
       </div>
-    </div>
     </header>
     <section class="w-11/12 m-auto mt-5">
       <div class="flex justify-center">
@@ -495,18 +513,20 @@
           <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
           <ul>
             <li class="mb-2">
-              <a href="./aboutus.html" class="text-gray-400 hover:text-gray-200"
+              <a
+                href="./index.html.html"
+                class="text-gray-400 hover:text-gray-200"
+                >Home</a
+              >
+            </li>
+            <li class="mb-2">
+              <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
                 >About Us</a
               >
             </li>
             <li class="mb-2">
-              <a href="#menu" class="text-gray-400 hover:text-gray-200"
+              <a href="./cuisine.html" class="text-gray-400 hover:text-gray-200"
                 >Our Menu</a
-              >
-            </li>
-            <li class="mb-2">
-              <a href="#services" class="text-gray-400 hover:text-gray-200"
-                >Services</a
               >
             </li>
             <li class="mb-2">
@@ -514,11 +534,6 @@
                 href="./contactus.html"
                 class="text-gray-400 hover:text-gray-200"
                 >Contact Us</a
-              >
-            </li>
-            <li class="mb-2">
-              <a href="#gallery" class="text-gray-400 hover:text-gray-200"
-                >Gallery</a
               >
             </li>
           </ul>
@@ -784,13 +799,11 @@
     // Clicking outside the popup closes it
     overlay.addEventListener("click", closePopup);
 
-    
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
-
   </script>
 </html>

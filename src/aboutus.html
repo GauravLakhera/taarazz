@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Work - Taaraaz Catering</title>
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#e7f3ff] text-gray-800 font-Raleway">
+    <header
+      class="flex justify-between items-center w-full top-0 bg-gray-100 md:bg-transparent backdrop-blur font-Raleway text-blue-900 md:p-4"
+    >
+      <!-- Logo -->
+      <div class="w-16 p-2 mx-2">
+        <img src="./images/logo2.png" class="object-cover" alt="Logo" />
+      </div>
+
+      <!-- Hamburger Icon (Visible on mobile) -->
+      <div class="md:hidden mx-2">
+        <button id="menu-btn" class="text-blue-900 focus:outline-none p-2">
+          <svg
+            class="w-8 h-8"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation (hidden on mobile, visible on md screens) -->
+      <div class="hidden md:flex-1 md:flex justify-center z-50">
+        <ul class="flex space-x-10 p-5 font-normal text-lg">
+          <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="./cuisine.html" class="hover:underline">Cuisine</a></li>
+          <li>
+            <h1
+              class="text-4xl font-PT_Serif font-extralight -tracking-tighter"
+            >
+              TAARAAZ
+            </h1>
+          </li>
+
+          <li>
+            <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="./contactus.html" class="hover:underline">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Call Us Button -->
+      <div class="hidden md:block p-2 px-4 rounded-xl bg-black text-white">
+        <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif"
+          >Call Us</a
+        >
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div
+        id="mobile-menu"
+        class="absolute top-16 left-0 w-full py-5 bg-gray-50 hidden z-[9999] md:hidden"
+      >
+        <ul class="flex flex-col space-y-4 p-5 text-lg text-center z-50">
+          <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
+          <li>
+            <a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a>
+          </li>
+          <li>
+            <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="./contactus.html" class="hover:text-blue-500"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
+          <a
+            href="tel:+919559137135"
+            class="cursor-pointer font-Raleway text-center"
+            >Call Us</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="mt-20 max-w-7xl mx-auto p-8 border border-black">
+      <!-- Page Title with Vector Background -->
+      <div
+        class="relative bg-gradient-to-r from-blue-400 to-blue-500 text-white py-16 rounded-lg shadow-lg mb-12 -z-10"
+      >
+        <div
+          class="absolute inset-0 bg-green-700 opacity-40 mix-blend-multiply"
+        ></div>
+        <div class="relative text-center">
+          <h1 class="text-4xl font-bold font-Raleway">
+            Our Work at Taaraaz Catering
+          </h1>
+          <p class="mt-4 text-lg">
+            We serve high-quality, nutritious, and delicious meals across all
+            segments.
+          </p>
+        </div>
+        <div
+          class="absolute bottom-0 right-0 transform translate-x-10 translate-y-10"
+        >
+          <img
+            src="./images/2.png"
+            alt="Catering"
+            class="h-48 w-48 bg-blue-100"
+          />
+        </div>
+      </div>
+
+      <!-- Current Outlets Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-semibold text-center mb-12">
+          Our Current Outlets
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Outlet 1 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105"
+          >
+            <img
+              src="https://via.placeholder.com/600x400"
+              alt="AIIMS Gorakhpur"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-2">AIIMS, Gorakhpur</h3>
+            <p class="text-gray-600">
+              Serving meals to healthcare professionals and visitors, ensuring a
+              blend of taste and nutrition.
+            </p>
+          </div>
+
+          <!-- Outlet 2 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105"
+          >
+            <img
+              src="https://via.placeholder.com/600x400"
+              alt="Gallant"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-2">GALLANT</h3>
+            <p class="text-gray-600">
+              Providing delicious, quality meals to employees and visitors at
+              Gallant.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Past Work Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-semibold text-center mb-12">
+          Our Previous Work
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Past Work 1 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105"
+          >
+            <img
+              src="https://via.placeholder.com/600x400"
+              alt="AIIMS Rishikesh"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-2">AIIMS, Rishikesh</h3>
+            <p class="text-gray-600">
+              Provided a range of catering services to meet the needs of the
+              AIIMS community.
+            </p>
+          </div>
+
+          <!-- Past Work 2 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105"
+          >
+            <img
+              src="https://via.placeholder.com/600x400"
+              alt="Corporate Events"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-2">Corporate Events</h3>
+            <p class="text-gray-600">
+              Delivered tailored catering services for Johnson & Johnson, John
+              Hopkins, and GALLANT.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission Section -->
+      <section class="relative bg-white py-16 px-8 rounded-lg shadow-lg mb-16">
+        <div class="absolute left-0 top-0 -translate-y-10 -translate-x-10">
+          <img
+            src="https://www.svgrepo.com/show/371264/chef.svg"
+            alt="Chef"
+            class="h-36 w-36 opacity-40"
+          />
+        </div>
+        <h2 class="text-3xl font-semibold mb-6 text-gray-900">Our Mission</h2>
+        <p class="text-gray-700 leading-relaxed">
+          At Taaraaz Foods Arts Pvt. Ltd., our mission is to provide an
+          extensive range of delicious, nutritious, and affordably accessible
+          meals designed to meet the needs of individuals across all
+          socioeconomic strata. Our unique selling propositions (USPs) include a
+          seamless blend of budget-friendly options and premium culinary
+          experiences, allowing us to serve every segment of society.
+        </p>
+      </section>
+
+      <!-- Vision Section -->
+      <section class="relative bg-white py-16 px-8 rounded-lg shadow-lg mb-16">
+        <div class="absolute right-0 top-0 -translate-y-10 translate-x-10">
+          <img
+            src="https://www.svgrepo.com/show/371287/serving-food.svg"
+            alt="Serving Food"
+            class="h-36 w-36 opacity-40"
+          />
+        </div>
+        <h2 class="text-3xl font-semibold mb-6 text-gray-900">Our Vision</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Our vision is to establish Taaraaz Foods Arts Pvt. Ltd. as a global
+          leader in the catering industry, recognized for delivering
+          high-quality, affordable food solutions that cater to the diverse
+          needs of all societal segments.
+        </p>
+      </section>
+
+      <!-- Values Section -->
+      <section class="relative bg-white py-16 px-8 rounded-lg shadow-lg">
+        <div class="absolute left-0 bottom-0 translate-x-10 translate-y-10">
+          <img
+            src="https://www.svgrepo.com/show/371292/dining.svg"
+            alt="Dining"
+            class="h-36 w-36 opacity-40"
+          />
+        </div>
+        <h2 class="text-3xl font-semibold mb-6 text-gray-900">Our Values</h2>
+        <ul class="space-y-4 text-gray-700">
+          <li>
+            <span class="font-bold">Customer Satisfaction:</span> We place the
+            highest priority on the satisfaction and needs of our customers,
+            ensuring that every meal not only meets but consistently exceeds
+            expectations.
+          </li>
+          <li>
+            <span class="font-bold">Quality Food:</span> Our unwavering
+            commitment to quality is evident in our selection of the freshest
+            ingredients and our culinary expertise, allowing us to deliver
+            exceptional dining experiences that distinguish us in the
+            marketplace.
+          </li>
+          <li>
+            <span class="font-bold">Affordability:</span> Our competitive
+            pricing model ensures that our high-quality offerings are accessible
+            to all, providing exceptional value without sacrificing taste or
+            culinary excellence.
+          </li>
+          <li>
+            <span class="font-bold">Hygiene and Safety:</span> We adhere to the
+            most rigorous standards of hygiene and food safety, implementing
+            comprehensive protocols to guarantee that every dish is prepared
+            with meticulous care and cleanliness, thereby safeguarding the
+            health and well-being of our patrons.
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer class="bg-blue-950 text-white py-12 font-Raleway mt-10">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Brand and Description -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Taaraaz.com</h2>
+          <p class="text-gray-400">
+            Providing world-class catering services for all occasions. From
+            corporate events to private parties, we make every event memorable
+            with delicious food.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li class="mb-2">
+              <a
+                href="./index.html.html"
+                class="text-gray-400 hover:text-gray-200"
+                >Home</a
+              >
+            </li>
+            <li class="mb-2">
+              <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
+                >About Us</a
+              >
+            </li>
+            <li class="mb-2">
+              <a href="./cuisine.html" class="text-gray-400 hover:text-gray-200"
+                >Our Menu</a
+              >
+            </li>
+            <li class="mb-2">
+              <a
+                href="./contactus.html"
+                class="text-gray-400 hover:text-gray-200"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact and Social Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4 font-PT_Serif">Get in Touch</h3>
+          <p class="mb-2 text-gray-400">Email: info@taaraaz.com</p>
+          <p class="mb-4 text-gray-400">Phone: +91 9559137135</p>
+
+          <h4 class="text-lg font-semibold mb-2">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-gray-200 w-8 h-8"
+              ><img src="./images/facebook.png"
+            /></a>
+            <a href="#" class="text-gray-400 hover:text-gray-200 w-8 h-8"
+              ><img src="./images/instagram.png"
+            /></a>
+            <a href="#" class="text-gray-400 hover:text-gray-200 w-8 h-8"
+              ><img src="./images/twitter-alt.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="mt-12 text-center border-t border-gray-700 pt-8">
+        <p class="text-gray-500">
+          &copy; 2024 Taaraaz.com. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</html>

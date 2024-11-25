@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./input.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -31,138 +32,164 @@
     ></video>
 
     <header
-  class="flex justify-between items-center absolute w-full top-0 bg-gray-100 md:bg-transparent backdrop-blur font-Raleway text-blue-900 md:p-4"
->
-  <!-- Logo -->
-  <div class="w-16 p-2 mx-2">
-    <img src="./images/logo2.png" class="object-cover" alt="Logo" />
-  </div>
-
-  <!-- Hamburger Icon (Visible on mobile) -->
-  <div class="md:hidden mx-2">
-    <button
-      id="menu-btn"
-      class="text-blue-900 focus:outline-none p-2"
+      class="flex justify-between items-center absolute w-full top-0 bg-gray-100 md:bg-transparent backdrop-blur font-Raleway text-blue-900 md:p-4"
     >
-      <svg
-        class="w-8 h-8"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
+      <!-- Logo -->
+      <div class="w-16 p-2 mx-2">
+        <img src="./images/logo2.png" class="object-cover" alt="Logo" />
+      </div>
+
+      <!-- Hamburger Icon (Visible on mobile) -->
+      <div class="md:hidden mx-2">
+        <button id="menu-btn" class="text-blue-900 focus:outline-none p-2">
+          <svg
+            class="w-8 h-8"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation (hidden on mobile, visible on md screens) -->
+      <div class="hidden md:flex-1 md:flex justify-center">
+        <ul class="flex space-x-10 p-5 font-normal text-lg">
+          <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="./cuisine.html" class="hover:underline">Cuisine</a></li>
+          <li>
+            <h1
+              class="text-4xl font-PT_Serif font-extralight -tracking-tighter"
+            >
+              TAARAAZ
+            </h1>
+          </li>
+          <li>
+            <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="./contactus.html" class="hover:underline">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Call Us Button -->
+      <div class="hidden md:block p-2 px-4 rounded-xl bg-black text-white">
+        <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif"
+          >Call Us</a
+        >
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div
+        id="mobile-menu"
+        class="absolute top-16 left-0 w-full bg-gray-50 hidden z-[9999] md:hidden"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Navigation (hidden on mobile, visible on md screens) -->
-  <div class="hidden md:flex-1 md:flex justify-center">
-    <ul class="flex space-x-10 p-5 font-normal text-lg">
-      <li><a href="./index.html" class="hover:underline">Home</a></li>
-      <li><a href="./cuisine.html" class="hover:underline">Cuisine</a></li>
-      <li>
-        <h1 class="text-4xl font-PT_Serif font-extralight -tracking-tighter">
-          TAARAAZ
-        </h1>
-      </li>
-      <li><a href="./ourWork.html" class="hover:underline">Our Work</a></li>
-      <li><a href="./contactus.html" class="hover:underline">Contact Us</a></li>
-    </ul>
-  </div>
-
-  <!-- Call Us Button -->
-  <div class="hidden md:block p-2 px-4 rounded-xl bg-black text-white">
-    <a href="tel:+919559137135" class="cursor-pointer font-PT_Serif">Call Us</a>
-  </div>
-
-  <!-- Mobile Menu (Initially hidden) -->
-  <div
-  id="mobile-menu"
-  class="absolute top-16 left-0 w-full  bg-gray-50 hidden z-[9999] md:hidden"
->
-  <ul class="flex flex-col space-y-4 p-5 text-lg text-center z-50">
-    <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
-    <li><a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a></li>
-    <li><a href="./ourWork.html" class="hover:text-blue-500">Our Work</a></li>
-    <li><a href="./contactus.html" class="hover:text-blue-500">Contact Us</a></li>
-  </ul>
-  <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
-    <a href="tel:+919559137135" class="cursor-pointer font-Raleway text-center">Call Us</a>
-  </div>
-</div>
-</header>
-
+        <ul class="flex flex-col space-y-4 p-5 text-lg text-center z-50">
+          <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
+          <li>
+            <a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a>
+          </li>
+          <li>
+            <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="./contactus.html" class="hover:text-blue-500"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
+          <a
+            href="tel:+919559137135"
+            class="cursor-pointer font-Raleway text-center"
+            >Call Us</a
+          >
+        </div>
+      </div>
+    </header>
 
     <!-- Hero Section -->
     <section
-      class="relative bg-[url('./images/bg.svg')] bg-no-repeat bg-cover bg-center flex font-Raleway text-black bg-slate-50"
+      class="relative bg-[url('./images/bg.svg')] bg-no-repeat bg-cover bg-center flex justify-center font-Raleway text-black bg-slate-50"
     >
-    <div id="overlay" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden"></div>
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden"
+      ></div>
 
-    <div
-      id="popup"
-      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-2xl w-full max-w-8xl hidden font-Raleway"
-    >
-      <!-- Close Button -->
-      <button
-        class="close-btn absolute -top-4 -right-4 w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white hover:bg-red-700 transition duration-300"
+      <div
+        id="popup"
+        class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-2xl hidden font-Raleway"
       >
-        X
-      </button>
-    
-      <!-- Container for form and image -->
-      <div class="grid grid-cols-1 md:grid-cols-2">
-    
-        <!-- Left side: Image -->
-        <div class="hidden md:block">
-          <img
-          src="./images/blue.jpg"
-            alt="Contact Us"
-            class="w-full h-full object-cover rounded-l-lg"
-          />
-        </div>
-    
-        <!-- Right side: Form -->
-        <div class="p-8">
-          <h2 class="text-3xl font-semibold text-gray-800 text-center mb-6">
-            Get in touch with us
-          </h2>
-    
-          <form class="space-y-4">
-            <input
-              type="text"
-              placeholder="Name"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        <!-- Close Button -->
+        <button
+          class="close-btn absolute -top-4 -right-4 w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white hover:bg-red-700 transition duration-300"
+        >
+          X
+        </button>
+
+        <!-- Container for form and image -->
+        <div class="flex md:flex-row justify-center items-center flex-col">
+          <!-- Left side: Image -->
+          <div class="md:block w-11/12">
+            <img
+              src="./images/blue.jpg"
+              alt="Contact Us"
+              class="w-full h-full object-cover rounded-l-lg"
             />
-            <input
-              type="text"
-              placeholder="Contact Number"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              placeholder="Location"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <textarea
-              placeholder="Message"
-              class="w-full p-3 border border-gray-300 rounded-lg h-28 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            ></textarea>
-            <button
-              type="submit"
-              class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+          </div>
+
+          <!-- Right side: Form -->
+          <div class="p-8 w-full">
+            <h2
+              class="md:text-3xl text-xl font-semibold text-gray-800 text-center mb-6"
             >
-              Submit
-            </button>
-          </form>
+              Get in touch with us
+            </h2>
+
+            <form class="card-form">
+              <div class="input">
+                <input type="text" class="input-field" required />
+                <label class="input-label">Name </label>
+              </div>
+              <div class="input">
+                <input type="text" class="input-field" required />
+                <label class="input-label">Email</label>
+              </div>
+              <div class="input">
+                <textarea
+                  type="password"
+                  class="input-field"
+                  required
+                ></textarea>
+                <label class="input-label">Message</label>
+              </div>
+              <div class="w-full flex justify-center mt-4">
+                <button
+                  class="text-center p-2 px-5 text-lg bg-blue-800 rounded-xl text-white"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    
-    
+
       <div
-        class="shadow-2xl md:-translate-y-28 z-10 bg-white w-72 h-72 md:h-[40rem] md:w-[40rem] transform rotate-45 mx-auto font-Raleway text-black m-auto justify-center items-center"
+        class="shadow-2xl md:-translate-y-28 z-10 bg-white w-72 h-72 md:h-[40rem] md:w-[40rem] transform rotate-45 font-Raleway text-black justify-center items-center"
       >
         <div
           class="text-[#333] h-full w-full flex flex-col items-center justify-center text-center transform -rotate-45"
@@ -186,7 +213,7 @@
         </div>
       </div>
     </section>
-     <section
+    <section
       class="flex flex-col justify-center font-Raleway items-center md:w-11/12 m-auto text-gray-300 mt-28 md:mt-36 p-4"
     >
       <div class="flex justify-between font-Raleway items-center">
@@ -206,14 +233,14 @@
         </div>
         <div>
           <img
-            class="object-cover w-64 md:w-[50rem]  rounded-[60%_27%_0%_100%_/_100%_0%_100%_0%]"
+            class="object-cover w-64 md:w-[50rem] rounded-[60%_27%_0%_100%_/_100%_0%_100%_0%]"
             src="./images/blue.jpg"
           />
         </div>
       </div>
       <div class="mt-5 rounded-3xl">
         <button
-          class="relative border p-2 md:p-5 md:pl-6 pr-10 bg-black text-white rounded-3xl hover:bg-blue-950 cursor-pointer group "
+          class="relative border p-2 md:p-5 md:pl-6 pr-10 bg-black text-white rounded-3xl hover:bg-blue-950 cursor-pointer group"
         >
           Get in touch
           <span
@@ -227,11 +254,13 @@
     <section
       class="flex flex-col font-Raleway m-auto mt-14 justify-center bg-[#e0eeff] shadow-xl w-11/12 p-4"
     >
-      <h1 class="md:text-3xl  underline text-[#454b7a] font-semibold">
+      <h1 class="md:text-3xl underline text-[#454b7a] font-semibold">
         Our Expertise
       </h1>
 
-      <div class="flex flex-col md:flex-row items-center justify-between h-full py-10 md:mt-4">
+      <div
+        class="flex flex-col md:flex-row items-center justify-between h-full py-10 md:mt-4"
+      >
         <div
           class="bg-blue-100 flex md:mr-4 shadow-xl rounded-md p-1 justify-center space-x-2 md:space-y-5 md:flex-col flex-row md:h-96"
         >
@@ -274,7 +303,7 @@
 
         <div class="p-4 bg-[#eef7ff] px-4 flex-1">
           <h1
-            class=" text-4xl md:text-5xl md:w-9/12 leading-[1.3] text-blue-950"
+            class="text-4xl md:text-5xl md:w-9/12 leading-[1.3] text-blue-950"
             id="heading_expertise"
           >
             Elevate Your Business Meetings with Exquisite Cuisine
@@ -299,7 +328,7 @@
     </section>
 
     <section
-      class=" flex bg-[url('./images/bg_menu.svg')] bg-no-repeat mt-16 py-10 bg-cover flex-col font-Raleway"
+      class="flex bg-[url('./images/bg_menu.svg')] bg-no-repeat mt-16 py-10 bg-cover flex-col font-Raleway"
     >
       <div
         class="flex flex-col md:flex-row bg-center backdrop-blur-sm m-auto justify-between shadow-2xl"
@@ -440,7 +469,14 @@
           <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
           <ul>
             <li class="mb-2">
-              <a href="./aboutus.html" class="text-gray-400 hover:text-gray-200"
+              <a
+                href="./index.html.html"
+                class="text-gray-400 hover:text-gray-200"
+                >Home</a
+              >
+            </li>
+            <li class="mb-2">
+              <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
                 >About Us</a
               >
             </li>
@@ -450,25 +486,14 @@
               >
             </li>
             <li class="mb-2">
-              <a href="./ourWork.html" class="text-gray-400 hover:text-gray-200"
-                >Our Work</a
-              >
-            </li>
-            <li class="mb-2">
               <a
                 href="./contactus.html"
                 class="text-gray-400 hover:text-gray-200"
                 >Contact Us</a
               >
             </li>
-            <li class="mb-2">
-              <a href="#gallery" class="text-gray-400 hover:text-gray-200"
-                >Gallery</a
-              >
-            </li>
           </ul>
         </div>
-
         <!-- Contact and Social Links -->
         <div>
           <h3 class="text-xl font-semibold mb-4 font-PT_Serif">Get in Touch</h3>
