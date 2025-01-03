@@ -32,10 +32,10 @@
     ></video>
 
     <header
-      class="flex justify-between items-center absolute w-full top-0 bg-gray-100 md:bg-transparent backdrop-blur font-Raleway text-blue-900 md:p-4"
+      class="flex justify-between z-[9999] items-center bg-[url('./images/bg.svg')] bg-no-repeat bg-cover bg-center absolute w-full top-0 bg-gray-100 backdrop-blur font-Raleway text-blue-900 md:p-4"
     >
       <!-- Logo -->
-      <div class="w-16 p-2 mx-2">
+      <div class="md:w-20 w-16 p-2 md:p-0  md:bg-gray-200 rounded-full">
         <img src="./images/logo2.png" class="object-cover" alt="Logo" />
       </div>
 
@@ -72,9 +72,7 @@
             </h1>
           </li>
           <li>
-            <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
-              >About Us</a
-            >
+            <a href="./Aboutus.html" class="hover:underline">About Us</a>
           </li>
           <li>
             <a href="./contactus.html" class="hover:underline">Contact Us</a>
@@ -92,30 +90,45 @@
       <!-- Mobile Menu (Initially hidden) -->
       <div
         id="mobile-menu"
-        class="absolute top-16 left-0 w-full bg-gray-50 hidden z-[9999] md:hidden"
+        class="absolute top-16 left-0 w-full py-5 bg-gray-50 hidden z-[9999] md:hidden"
       >
-        <ul class="flex flex-col space-y-4 p-5 text-lg text-center z-50">
-          <li><a href="./index.html" class="hover:text-blue-500">Home</a></li>
-          <li>
-            <a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a>
-          </li>
-          <li>
-            <a href="./Aboutus.html" class="text-gray-400 hover:text-gray-200"
-              >About Us</a
+        <div class="m-4 shadow-md p-2">
+          <ul class="flex flex-col space-y-4 p-2 text-lg text-center z-50">
+            <li
+              class="flex justify-center items-center py-1 w-full content-center bg-blue-100 rounded-md space-x-2"
             >
-          </li>
-          <li>
-            <a href="./contactus.html" class="hover:text-blue-500"
-              >Contact Us</a
+              <img src="./images/Header/home.svg" class="w-5 h-5" />
+              <a href="./index.html" class="hover:text-blue-500">Home</a>
+            </li>
+            <li
+              class="flex justify-center items-center py-1 content-center bg-blue-100 rounded-md space-x-2"
             >
-          </li>
-        </ul>
-        <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
-          <a
-            href="tel:+919559137135"
-            class="cursor-pointer font-Raleway text-center"
-            >Call Us</a
-          >
+              <img src="./images/Header/cuisine.svg" class="w-5 h-5" />
+              <a href="./cuisine.html" class="hover:text-blue-500">Cuisine</a>
+            </li>
+            <li
+              class="flex justify-center items-center py-1 content-center bg-blue-100 rounded-md space-x-2"
+            >
+              <img src="./images/Header/about us.svg" class="w-5 h-5" />
+              <a href="./Aboutus.html" class="hover:text-blue-500">About Us</a>
+            </li>
+            <li
+              class="flex justify-center items-center py-1 content-center bg-blue-100 rounded-md space-x-2"
+            >
+              <img src="./images/Header/contact us .svg" class="w-5 h-5" />
+              <a href="./contactus.html" class="hover:text-blue-500"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+
+          <div class="p-2 px-4 rounded-xl bg-black text-white text-center">
+            <a
+              href="tel:+919559137135"
+              class="cursor-pointer font-Raleway text-center"
+              >Call Us</a
+            >
+          </div>
         </div>
       </div>
     </header>
@@ -124,7 +137,6 @@
     <section
       class="relative bg-[url('./images/bg.svg')] bg-no-repeat bg-cover bg-center flex justify-center font-Raleway text-black bg-slate-50"
     >
-
       <div
         id="overlay"
         class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden"
@@ -132,7 +144,7 @@
 
       <div
         id="popup"
-        class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-2xl hidden font-Raleway"
+        class="fixed top-1/2 left-1/2 z-[2000] transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-2xl hidden font-Raleway"
       >
         <!-- Close Button -->
         <button
@@ -142,9 +154,9 @@
         </button>
 
         <!-- Container for form and image -->
-        <div class="flex md:flex-row justify-center items-center flex-col">
+        <div class="flex md:flex-row  content-center justify-center items-center border shadow-xl flex-col">
           <!-- Left side: Image -->
-          <div class="md:block w-11/12">
+          <div class="md:block w-10/12">
             <img
               src="./images/blue.jpg"
               alt="Contact Us"
@@ -187,10 +199,13 @@
             </form>
           </div>
         </div>
+        <div class="flex justify-center">
+          <h1 class="text-xl py-4 font-semibold">Taaraaz food arts pvt. ltd</h1>
+        </div>
       </div>
 
       <div
-        class="shadow-2xl md:-translate-y-28 z-10 bg-white w-72 h-72 md:h-[40rem] md:w-[40rem] transform rotate-45 font-Raleway text-black justify-center items-center"
+        class="shadow-2xl md:-translate-y-28 bg-white w-72 h-72 md:h-[40rem] md:w-[40rem] transform rotate-45 z-[999] font-Raleway text-black justify-center items-center"
       >
         <div
           class="text-[#333] h-full w-full flex flex-col items-center justify-center text-center transform -rotate-45"
@@ -211,30 +226,32 @@
               Book Now
             </button>
           </div>
-
         </div>
-       
       </div>
     </section>
-    <div class="flex justify-end px-2 text-xs px-2">
-      <a href="https://www.freepik.com/free-vector/hand-drawn-food-background_3907558.htm#fromView=image_search&page=1&position=0&uuid=7d9c5789-2f7d-4233-a2fa-8d533540a91f">Designed by Freepik</a>
+    <div class="flex justify-end text-xs px-2">
+      <a
+        href="https://www.freepik.com/free-vector/hand-drawn-food-background_3907558.htm#fromView=image_search&page=1&position=0&uuid=7d9c5789-2f7d-4233-a2fa-8d533540a91f"
+        >Designed by Freepik</a
+      >
     </div>
     <section
       class="flex flex-col justify-center font-Raleway items-center md:w-11/12 m-auto text-gray-300 mt-28 md:mt-36 p-4"
     >
-      <div class="flex justify-between font-Raleway items-center">
+      <div class="flex justify-between font-Raleway  items-center">
         <div class="flex flex-col space-y-1 flex-1">
-          <h1 class="text-xs md:text-lg text-blue-900">
+          <h1 class="text-xs md:text-xl text-blue-900">
             Welcome to <strong>Taaraaz</strong>,
           </h1>
-          <h1 class="text-3xl md:text-8xl text-[#383d6f]">
-            Elevate Your Events with
-            <span id="highlight">Taaraaz </span> Catering
+          <h1 class="text-3xl md:text-[8rem] leading-[8rem] text-[#383d6f]">
+            Delightful Catering By
+
+            <span id="highlight" class="font-bold">Taaraaz </span>
           </h1>
-          <h1 class="text-gray-900 opacity-60 pr-3 text-xs md:text-xl mt-12">
-            Providing world-class
-            <strong id="Partner">Catering</strong> services with a personal
-            touch.
+          <h1 class="text-gray-900 py-10 opacity-60 pr-3 text-xs md:text-xl ">
+            Experience top-quality, healthy,
+            <strong id="Partner">and tasty </strong>
+            food at unbeatable prices. Perfect for your next event
           </h1>
         </div>
         <div>
@@ -245,12 +262,13 @@
         </div>
       </div>
       <div class="mt-5 rounded-3xl">
-        <button
+        <button 
+          id="book_now"
           class="relative border p-2 md:p-5 md:pl-6 pr-10 bg-black text-white rounded-3xl hover:bg-blue-950 cursor-pointer group"
         >
           Get in touch
           <span
-            class="rounded-3xl absolute inset-y-0 right-4 flex items-center text-lg transform transition-transform duration-300 group-hover:translate-x-2"
+            class="rounded-3xl absolute inset-y-0 right-[1px] flex items-center text-lg transform transition-transform duration-300 group-hover:translate-x-2"
           >
             →
           </span>
@@ -301,7 +319,7 @@
           <div class="h-full w-11/12">
             <img
               id="expertise_img"
-              class="md:h-[36rem] h-[30rem] mt-4 md:mt-0 border border-gray-600 w-full object-cover rounded-[50%_50%_0%_0%_/_40%_40%_0%_0%]"
+              class="md:h-[36rem] h-[30rem] mt-4 md:mt-0 shadow-2xl border-gray-600 w-full object-cover rounded-[50%_50%_0%_0%_/_40%_40%_0%_0%]"
               src="./images/dummy.jpg"
             />
           </div>
@@ -334,10 +352,10 @@
     </section>
 
     <section
-      class="flex bg-[url('./images/bg_menu.svg')] bg-no-repeat mt-16 py-10 bg-cover flex-col font-Raleway"
+      class="flex bg-[url('./images/bg_menu.svg')] bg-opacity-20 bg-no-repeat mt-16 py-10 bg-cover flex-col font-Raleway"
     >
       <div
-        class="flex flex-col md:flex-row bg-center backdrop-blur-sm m-auto justify-between shadow-2xl"
+        class="flex flex-col md:flex-row bg-center m-auto justify-between shadow-2xl"
       >
         <div class="w-full max-w-2xl mx-auto">
           <!-- Set a fixed width -->
@@ -375,7 +393,7 @@
             <!-- Menu Items Grid -->
             <div
               id="menu-content"
-              class="grid grid-cols-2 gap-6 opacity-0 transition-opacity duration-500 overflow-hidden"
+              class="grid grid-cols-2 gap-6 backdrop-blur-sm opacity-0 transition-opacity duration-500 p-2 shadow-lg rounded-xl overflow-hidden"
             >
               <div>
                 <h3 class="font-bold text-lg mb-2">Starter</h3>
@@ -457,8 +475,11 @@
         </div>
       </div>
     </section>
-    <div class="flex justify-end text-xs">
-      <a href="https://www.freepik.com/free-vector/hand-drawn-style-food-twitch-background_18493047.htm#fromView=image_search&page=1&position=0&uuid=383d7022-7dcf-4f45-9bff-bb9808bf61cd">Designed by freepik</a>
+    <div class="flex justify-end px-2 text-xs">
+      <a
+        href="https://www.freepik.com/free-vector/hand-drawn-style-food-twitch-background_18493047.htm#fromView=image_search&page=1&position=0&uuid=383d7022-7dcf-4f45-9bff-bb9808bf61cd"
+        >Designed by freepik</a
+      >
     </div>
 
     <footer class="bg-blue-950 text-white py-12 font-Raleway mt-10">

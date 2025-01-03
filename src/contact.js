@@ -64,7 +64,7 @@ const sendEmail = (event) => {
 
   // Send the email using EmailJS
   emailjs
-    .send("service_az98cz7", "template_qurx16p", {
+    .send("default_service", "template_19jjgwt", {
       to_name: "Gaurav",
       from_name: name,
       message: message, // Updated message
